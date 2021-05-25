@@ -1,0 +1,14 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: kind-kind-wego-wordpress
+  namespace: wego-system
+spec:
+  interval: 30s
+  ref:
+    branch: main
+  secretRef:
+    name: kind-kind-wego-wordpress
+  url: ssh://git@github.com/jrryjcksn/jerry-wordpress.git
+
